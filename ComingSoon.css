@@ -1,0 +1,77 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://via.placeholder.com/1500'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Container for the page */
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.headline {
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.subheadline {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+/* Countdown timer */
+.countdown {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.time-box {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.time {
+    font-size: 3em;
+    font-weight: 600;
+    color: #f5a623;
+}
+
+.label {
+    display: block;
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+/* Call-to-action button */
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #f5a623;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d48919;
+}
