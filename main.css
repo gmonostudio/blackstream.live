@@ -7,157 +7,80 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: radial-gradient(circle, #1b2735, #090a0f);
+  background: linear-gradient(to bottom, #1e3c72, #2a5298);
   color: #ffffff;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  height: 100vh;
   overflow: hidden;
 }
 
 /* Container */
 .container {
-  max-width: 700px;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  animation: fadeIn 2s ease-in-out;
-}
-
-/* Headline */
-.content h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-  background: linear-gradient(to right, #ff7eb3, #ff758c);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.content p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: #dcdcdc;
-}
-
-/* Countdown Styles */
-.countdown {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.countdown-item {
-  flex: 1;
-  margin: 0 5px;
   text-align: center;
 }
 
-.countdown-item span:first-child {
-  display: block;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #ffdf7e;
-  text-shadow: 0 0 15px rgba(255, 223, 126, 0.6);
-  animation: glow 1.5s infinite alternate;
+.title {
+  font-size: 3rem;
+  animation: fadeIn 2s ease-in-out;
 }
 
-.countdown-item span:last-child {
-  font-size: 1rem;
-  color: #dcdcdc;
+.subtitle {
+  font-size: 1.5rem;
+  margin: 10px 0 30px;
+  animation: fadeIn 3s ease-in-out;
 }
 
-/* Email Notification Form */
-form {
+/* Circle Animation */
+.animation-container {
   display: flex;
   justify-content: center;
   gap: 10px;
+  margin: 20px 0;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+  animation: bounce 1.5s infinite;
+}
+
+.circle:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.circle:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Footer */
+.footer {
   margin-top: 20px;
-}
-
-form input {
-  padding: 10px;
   font-size: 1rem;
-  border: 2px solid #ff758c;
-  border-radius: 5px;
-  background: transparent;
-  color: #ffffff;
-  outline: none;
-  transition: border-color 0.3s ease;
+  animation: fadeIn 4s ease-in-out;
+  color: rgba(255, 255, 255, 0.7);
 }
 
-form input::placeholder {
-  color: #dcdcdc;
-}
-
-form input:focus {
-  border-color: #ffdf7e;
-}
-
-form button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #ffffff;
-  background: linear-gradient(to right, #ff7eb3, #ff758c);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(255, 118, 156, 0.5);
-}
-
-/* Keyframe Animations */
+/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0);
   }
 }
 
-@keyframes glow {
-  to {
-    text-shadow: 0 0 20px rgba(255, 223, 126, 1);
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
   }
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .content h1 {
-    font-size: 2.5rem;
-  }
-
-  .countdown-item span:first-child {
-    font-size: 2rem;
-  }
-
-  form {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  form input {
-    width: 100%;
-  }
-
-  form button {
-    width: 100%;
+  50% {
+    transform: translateY(-20px);
   }
 }
